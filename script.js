@@ -72,3 +72,9 @@ function deleteCat(id) {
         }
     })
 }
+
+var socket = io.connect('http://localhost:3000');
+
+socket.on('number', function(data){
+    console.log("Received number: " + data);
+});
